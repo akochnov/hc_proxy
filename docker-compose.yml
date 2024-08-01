@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  flask-app:
+    build: .
+    ports:
+      - "3452:3452"
+    environment:
+      - FLASK_APP=proxy_server.py
+#      - FLASK_ENV=development  # Optional: can be removed in production
+      - FLASK_RUN_PORT=3452
