@@ -22,7 +22,7 @@ def proxy(path):
     target_url = f'{TARGET_SERVER}/{path}'
     
     # Forward the GET request to the target server
-    response = requests.get(target_url, headers=request.headers)
+    response = requests.get(target_url)
     
     # Return the response from the target server unchanged
     return Response(response.content, status=response.status_code, headers=dict(response.headers))
